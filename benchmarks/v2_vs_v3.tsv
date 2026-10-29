@@ -1,0 +1,11 @@
+graph	v2_solve_s	v2_breakpoints	contracted_solve_s	step6_solve_s	step7_solve_s	v3_solve_s	v3_breakpoints	speedup_v2_over_v3
+close-cliques.ugraph	0.056	4	0.033	0.034	0.033	0.043	5	1.3
+com-amazon.ungraph.ugraph	169.177	1257	89.143	78.456	44.513	5.325	1258	31.8
+com-dblp.ungraph.ugraph	142.779	1088	73.583	65.493	37.226	3.726	1089	38.3
+coso.ugraph	0.000	3	0.000	0.000	0.000	0.000	4	n/a
+ego-facebook.ugraph	0.427	196	0.244	0.232	0.156	0.053	197	8.1
+ego-twitter.ugraph	65.287	1038	32.620	29.680	20.222	1.609	1039	40.6
+email-Enron.ugraph	3.747	358	1.918	1.763	0.978	0.211	359	17.8
+soc-Epinions1.ugraph	10.889	389	4.647	4.322	2.400	0.424	390	25.7
+soc-Slashdot0811.ugraph	11.801	341	5.303	4.758	2.583	0.474	342	24.9
+soc-Slashdot0902.ugraph	14.140	383	6.375	5.778	3.282	0.587	384	24.1

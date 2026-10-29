@@ -8,7 +8,7 @@ A simple parametric minimum cut solver that provides the optimal minimum cut for
 This implementation uses a variant of the fully parametric HPF algorithm as described in:
 >    DS Hochbaum (2008), The Pseudoflow algorithm: A new algorithm for the maximum flow problem. Operations Research, 58(4):992-1009.
 
-This implementation does not use *free runs* nor does it use warm starts with information from previous runs (see pg.15). This implementation should therefore **not be used** for comparison with the fully parametric HPF algorithm.
+This implementation does not use *free runs* nor does it carry flows and labels between runs (see pg.15). This implementation should therefore **not be used** for comparison with the fully parametric HPF algorithm.
 
 ## Instructions for C
 Navigate to directory `src/pseudoflow/c`, and compile the `hpf` executable with `make`.
@@ -35,11 +35,10 @@ where the `a` line is repeated for each arc. The file should satisfy the followi
 The solver will generate the following output file:
 ```
 t <time (in sec) read data> <time (in sec) initialize> <time (in sec) solve>
-s <# arc scans> <# mergers> <# pushes> <# relabels > <# gap >
-p <number of lambda intervals = k>
-l <lambda upperbound interval 1> ... <lambda upperbound interval k>
-n <node-id> <lambda sourceset breakpoint >
+s <# arc scans> <# mergers> <# pushes> <# relabels> <# gaps>
+p <number of breakpoints = k>
+l <lambda> <node> <node> ...
 ```
-The `n` line appears for each node. `<lambda sourceset breakpoint >` indicates the lambda value at which a node is added into the source set.
+The `l` line appears for each breakpoint, in increasing order of `lambda`, and lists the nodes that are added into the source set at that `lambda` value.
 
 See `src/pseudoflow/c/example` for an example.

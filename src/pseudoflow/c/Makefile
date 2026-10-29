@@ -1,4 +1,4 @@
-OPT = -O4 -march=native -g --static
+OPT = -O4 -g
 CFLAGS = -c -fpic -Wall -std=gnu99 $(OPT)
 LDFLAGS = --static
 
